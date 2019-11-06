@@ -14,7 +14,10 @@
 
 var time = 0;
 
-setInterval(() => {
+var timer = setInterval(() => {
     time += 2;
     console.log(time + " seconds have passed");
+    if (time > 5) {
+        clearInterval(timer);
+    }
 }, 2000);
